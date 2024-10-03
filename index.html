@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <title>Asad - Developer Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(0, 0, 33);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100px;
+      background: rgb(18, 18, 62);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    nav ul li a:hover {
+      color: rgb(199, 162, 235);
+    }
+
+
+    nav ul li a::after {
+      content: '';
+      height: 3px;
+      display: block;
+      width: 100%;
+      background-color: rgb(199, 162, 235);
+      left: 0;
+      bottom: 0;
+      transform: scale(0, 1);
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      transform: scale(1, 1);
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 100px 0;
+    }
+
+    .firstSection>div {
+      width: 30%;
+    }
+
+    .leftSection {
+      font-size: 3rem;
+    }
+
+    .leftSection .buttons {
+      padding: 50px 0;
+    }
+
+    .leftSection .btn {
+      padding: 12px;
+      background: #1e2167;
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .rightSection img {
+      width: 100%;
+    }
+
+    .text-purple {
+      color: rgb(170, 107, 228);
+    }
+
+    #element {
+      color: rgb(170, 107, 228);
+    }
+
+    .secondSection {
+      max-width: 80vw;
+      margin: auto;
+      height: 80vh;
+    }
+
+    .secondSection h1 {
+      font-size: 1.9rem;
+    }
+
+    .text-gray {
+      color: gray;
+    }
+
+    main hr {
+      border: 0;
+      background: rgb(170, 107, 228);
+      margin: 40px 84px;
+      height: 2px;
+    }
+
+    .box {
+      background: white;
+      width: 80vw;
+      height: 2px;
+      margin: 50px 0;
+      display: flex;
+      position: relative;
+      top: 23px;
+    }
+
+    .vertical {
+      height: 93px;
+      width: 1px;
+      background: white;
+      margin: 0 180px;
+      left: 23px;
+    }
+
+    .image-top {
+      width: 50px;
+      position: relative;
+      top: -56px;
+      left: -24px;
+    }
+
+    .vertical-title {
+      position: relative;
+      top: 39px;
+      left: -35px;
+      width: 300px;
+    }
+
+    .vertical-desc {
+      position: relative;
+      top: 41px;
+      left: -35px;
+      color: gray;
+      width: 300px;
+      font-size: 15px;
+    }
+
+    .vertical-line {
+      position: relative;
+      left: -75px;
+    }
+
+    .image-left {
+      width: 40px;
+      position: relative;
+      top: -47px;
+      left: -21px;
+    }
+
+    .vertical-line2 {
+      position: relative;
+      left: -75px;
+      top: 10px;
+    }
+
+    .image-bottom {
+      width: 100px;
+      position: relative;
+      left: -50px;
+      top: -55px;
+    }
+
+    .vertical-line3 {
+      position: relative;
+      left: -75px;
+      top: -13px;
+    }
+
+    .footer {
+      display: flex;
+      background: #0e0e1a;
+      height: 150px;
+      padding: 23px 122px;
+      justify-content: space-evenly;
+    }
+
+    .footer li {
+      list-style: none;
+    }
+
+    .footer li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer>div {
+      width: 223px;
+    }
+
+    .footer-rights {
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Asshad's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        Hi,My name is <span class="text-purple">Asshad</span>
+        <div>and I am a passionate</div>
+        <span id="typed"></span>
+        <div class="buttons">
+          <button class="btn">Download Resume</button>
+          <button class="btn">Visit Github</button>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="developer.png">
+      </div>
+
+    </section>
+    <hr>
+    <div class="secondSection">
+      <span class="text-gray">What I have done so far</span>
+      <h1>Work Experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img src="pngegg.png" class="image-top" alt="HTML">
+          <div class="vertical-line">
+            <div class="vertical-title">
+              <h3>HTML Developer(2019-2021)</h3>
+            </div>
+            <div class="vertical-desc">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero veritatis, magni, qui minima ex
+                impedit facere similique error vel voluptatibus explicabo amet!</P>
+            </div>
+          </div>
+        </div>
+        <div class="vertical"><img src="css.png" class="image-left" alt="CSS">
+          <div class="vertical-line2">
+            <div class="vertical-title">
+              <h3>CSS Developer(2021-2022)</h3>
+            </div>
+            <div class="vertical-desc">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero veritatis, magni, qui minima ex
+                impedit facere similique error vel voluptatibus explicabo amet!</P>
+            </div>
+          </div>
+        </div>
+        <div class="vertical"><img src="php.png" class="image-bottom" alt="PHP">
+          <div class="vertical-line3">
+            <div class="vertical-title">
+              <h3>PHP Developer(2023-2024)</h3>
+            </div>
+            <div class="vertical-desc">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero veritatis, magni, qui minima
+                ex
+                impedit facere similique error vel voluptatibus explicabo amet!</P>
+            </div>
+          </div>
+        </div>
+        <div class="vertical"><img src="js.png" class="image-top" alt="JavaScript">
+          <div class="vertical-line">
+            <div class="vertical-title">
+              <h3>JS Developer(2024-2025)</h3>
+            </div>
+            <div class="vertical-desc">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero veritatis, magni, qui minima ex
+                impedit facere similique error vel voluptatibus explicabo amet!</P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="footer-first">
+        <h3>Asshad's Developer Portfolio</h3>
+      </div>
+      <div class="footer-Second">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-Third">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-fourth">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rights">
+      Copyright © www.asshadsportfolio.com | All rights reserved
+    </div>
+
+
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    var options = {
+      strings: ['Web Designer.', 'Video Editor.', 'Graphics Designer.', 'Web Developer.'],
+      typeSpeed: 40,
+      loop: true
+    }
+    var typed = new Typed("#typed", options);
+  </script>
+
+</body>
+
+</html>
